@@ -8,6 +8,7 @@ def test_composicion_instancias():
 def test_composicion_metodo_aumentar_hp():
     motor = Motor(120, "Gasolina")
     coche = VehiculoCompuesto("Ford", "Fiesta", 2020, motor)
+    assert coche.motor.hp == 120
     coche.aumentar_hp(30)
     assert coche.motor.hp == 150  
 
